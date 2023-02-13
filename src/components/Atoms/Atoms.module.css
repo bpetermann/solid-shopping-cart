@@ -1,0 +1,17 @@
+/* Infobar */
+.infobar {
+  display: flex;
+  justify-content: center;
+  background-color: #3e1062;
+}
+
+.infobar > div {
+  justify-content: center;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1216px;
+  padding: 0 8px;
+}
