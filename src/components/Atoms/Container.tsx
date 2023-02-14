@@ -1,8 +1,8 @@
 import { ParentComponent } from 'solid-js';
-import styles from "./Atoms.module.css";
+import styles from './Container.module.css';
 
-const Template: ParentComponent <{classname: string}> = (props) => (
-  <section class={styles[props.classname]}>
+const Template: ParentComponent<{ classname?: string }> = (props) => (
+  <section class={`${styles.container} ${styles[props.classname ?? '']}`}>
     <div>{props.children}</div>
   </section>
 );

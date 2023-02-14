@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container > div {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1216px;
+  padding: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    border-bottom: 1px solid #d0d1d3;
+  }
+}
+
+/* Infobar */
+.infobar {
+  background-color: #3e1062;
+}
+
+.infobar > div {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .infobar {
+    display: none;
+  }
+}
+
+/* Navbar */
+.navbar {
+  padding: 8px 0px;
+  text-align: center;
+}
