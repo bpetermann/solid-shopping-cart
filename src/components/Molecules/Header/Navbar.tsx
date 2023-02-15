@@ -1,7 +1,7 @@
-import Container from '../Atoms/Container';
+import Container from '../../Atoms/Container';
 import styles from './Navbar.module.css';
 import { Component } from 'solid-js';
-import Logo from '../Atoms/Logo';
+import Logo from '../../Atoms/Logo';
 
 const InfoBar: Component = () => {
   return (

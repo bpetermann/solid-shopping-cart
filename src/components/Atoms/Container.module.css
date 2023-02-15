@@ -39,3 +39,16 @@
   padding: 8px 0px;
   text-align: center;
 }
+
+/* Searchbar */
+.searchbar {
+  display: none;
+}
+.searchbar > div {
+  padding: 0px;
+}
+@media (max-width: 768px) {
+  .searchbar {
+    display: flex;
+  }
+}

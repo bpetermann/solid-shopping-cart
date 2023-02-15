@@ -1,13 +1,39 @@
 .close {
-    all: unset;
-    cursor: pointer;
-    height: 18px;
-    margin-left: 8px;
-  }
-  .close > img {
-    height: 100%;
-    width: auto;
-    filter: invert(95%) sepia(0%) saturate(7500%) hue-rotate(26deg)
-      brightness(107%) contrast(108%);
-  }
-  
+  all: unset;
+  cursor: pointer;
+  height: 18px;
+  margin-left: 8px;
+}
+
+.close > img {
+  height: 100%;
+  width: auto;
+  filter: invert(95%) sepia(0%) saturate(7500%) hue-rotate(26deg)
+    brightness(107%) contrast(108%);
+}
+
+.burger {
+  width: 48px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align: middle;
+  border-right: 1px solid #d0d1d3;
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.burger > span {
+  width: 60%;
+  height: 1.6px;
+  background: #525252;
+  display: block;
+  margin: 9px 6.4px;
+}
+.burger > span:nth-of-type(2) {
+  width: 40%;
+}
