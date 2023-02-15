@@ -1,7 +1,6 @@
-import { Component } from 'solid-js';
+import { Container, Close } from '@/components/Atoms';
 import styles from './InfoBar.module.css';
-import Container from '../../Atoms/Container';
-import Close from '../../Atoms/Buttons/Close';
+import { Component } from 'solid-js';
 
 const InfoBar: Component<{ closeInfo: () => void }> = (props) => {
   return (

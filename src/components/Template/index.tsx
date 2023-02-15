@@ -1,5 +1,5 @@
 import type { Component } from 'solid-js';
-import Header from '../Organisms/Header';
+import { Header } from '@/components/Organisms';
 
 const Template: Component = () => <Header />;
 

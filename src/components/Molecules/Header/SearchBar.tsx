@@ -1,6 +1,4 @@
-import BurgerButton from '../../Atoms/Buttons/BurgerButton';
-import Container from '../../Atoms/Container';
-import Input from '../../Atoms/Input';
+import { Input, Container, BurgerButton } from '@/components/Atoms';
 import { Component } from 'solid-js';
 
 const SearchBar: Component<{
@@ -11,7 +9,7 @@ const SearchBar: Component<{
   return (
     <Container classname='searchbar'>
       <BurgerButton onClick={toggleMenu} />
-      <Input value={value} setSearchTerm={setSearchTerm}/>
+      <Input value={value} setSearchTerm={setSearchTerm} />
     </Container>
   );
 };

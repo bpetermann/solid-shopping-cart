@@ -1,8 +1,5 @@
-import { createEffect } from 'solid-js';
-import SearchBar from '../Molecules/Header/Searchbar';
+import { SearchBar, InfoBar, Navbar } from '@/components/Molecules/Header';
 import { Component, createSignal } from 'solid-js';
-import InfoBar from '../Molecules/Header/InfoBar';
-import Navbar from '../Molecules/Header/Navbar';
 
 const Header: Component = () => {
   const [showInfo, setShowInfo] = createSignal<boolean>(true);
