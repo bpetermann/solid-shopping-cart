@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import styles from './Molecules.module.css';
+import styles from './InfoBar.module.css';
 import Container from '../Atoms/Container';
 import Close from '../Atoms/Buttons/Close';
 
