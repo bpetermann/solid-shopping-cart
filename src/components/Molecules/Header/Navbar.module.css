@@ -3,14 +3,13 @@
   text-align: start;
 }
 
-.navbar > button {
+.categories {
   all: unset;
-  padding: 6px 8px;
-  color: #000;
-  cursor: pointer;
-  min-width: 64px;
-  text-align: center;
-  font-weight: 700;
+}
+
+.categories > li {
+  all: unset;
+  background-color: #fff;
 }
 
 .cart {

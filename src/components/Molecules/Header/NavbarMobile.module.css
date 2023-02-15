@@ -1,0 +1,24 @@
+.navbar {
+  display: none;
+}
+
+.categories {
+  all: unset;
+}
+
+.categories > li {
+  all: unset;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-top: 0;
+    display: block;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
