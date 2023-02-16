@@ -52,3 +52,21 @@
     display: flex;
   }
 }
+
+/* Hero */
+.hero {
+  background-color: #2e5492;
+  padding-top: 48px;
+  border-bottom: none;
+}
+.hero > div {
+  align-items: flex-start;
+  gap: 32px;
+}
+@media (max-width: 768px) {
+  .hero > div {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+}
