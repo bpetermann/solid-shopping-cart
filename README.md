@@ -1,34 +1,22 @@
-## Usage
+## Solid Shopping Cart
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+- Just learning solid by rebuilding my [shopping-cart](https://github.com/bpetermann/svelte-shopping-cart) project with [solidJS](https://github.com/solidjs/solid)<br>
+- Structure follows the atomic design principles
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+### Thanks
 
-```bash
-$ npm install # or pnpm install or yarn install
+- Model photo by <a href="https://unsplash.com/de/@wiola3001">Wioletta Płonkowska
+</a> on <a href="https://unsplash.com/s/photos/model?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
+- Product photos by <a href="https://unsplash.com/@ikredenets?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Irene Kredenets</a> on <a href="https://unsplash.com/s/photos/shoes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+## Recommended IDE Setup
+
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+
+```
+git clone https://github.com/bpetermann/solid-shopping-cart.git
+cd cv-application
+npm install
+npm run dev
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm dev` or `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
