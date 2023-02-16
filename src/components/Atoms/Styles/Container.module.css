@@ -71,7 +71,19 @@
   }
 }
 
- /* Products */
- .products {
+/* Products */
+.products {
   background-color: #84bce5;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #efeff0;
+  margin-bottom: 36px;
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .newsletter > div {
+    flex-direction: column;
+  }
 }

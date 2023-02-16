@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 24px;
+  margin-top: 16px;
+  gap: 16px;
+  width: 100%;
+  max-width: 528px;
+}
+
+.form > p:first-of-type {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.icon {
+  height: 100%;
+  max-height: 32px;
+  width: auto;
+  filter: invert(95%) sepia(0%) saturate(7500%) hue-rotate(26deg)
+    brightness(107%) contrast(108%);
+}
+
+.info {
+  font-weight: 400;
+  font-size: 12px;
+}

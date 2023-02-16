@@ -9,7 +9,12 @@ const SearchBar: Component<{
   return (
     <Container classname='searchbar'>
       <BurgerButton onClick={toggleMenu} />
-      <Input value={value} setSearchTerm={setSearchTerm} />
+      <Input
+        value={value}
+        setInput={setSearchTerm}
+        classname='search'
+        marker='Search'
+      />
     </Container>
   );
 };

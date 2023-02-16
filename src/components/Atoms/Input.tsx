@@ -4,17 +4,19 @@ import type { JSX } from 'solid-js';
 
 const Input: Component<{
   value: string;
-  setSearchTerm: (value: string) => void;
-}> = ({ value, setSearchTerm }) => {
+  marker: string;
+  classname?: string;
+  setInput: (value: string) => void;
+}> = ({ value, setInput, marker, classname }) => {
   const onInput: JSX.EventHandler<HTMLInputElement, InputEvent> = (event) => {
-    setSearchTerm(event.currentTarget.value);
+    setInput(event.currentTarget.value);
   };
 
   return (
     <input
       type='text'
-      placeholder='Search'
-      class={styles.search}
+      placeholder={marker ?? 'Search'}
+      class={`${styles.input} ${styles[classname ?? '']}`}
       value={value}
       onInput={onInput}
     />
