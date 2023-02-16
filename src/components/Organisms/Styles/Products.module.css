@@ -1,0 +1,27 @@
+.loading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 16px auto;
+}
+
+.products {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 100%;
+  padding: 24px 0px;
+}
+
+.products > li {
+  list-style: none;
+}
+
+.error {
+  margin: 16px auto;
+  display: block;
+  color: #d1003a;
+}

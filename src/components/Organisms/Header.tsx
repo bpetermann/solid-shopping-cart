@@ -3,7 +3,7 @@ import {
   InfoBar,
   Navbar,
   NavbarMobile,
-} from '@/components/Molecules/Header';
+} from '@/components/Molecules';
 import { Component, createSignal } from 'solid-js';
 
 const Header: Component = () => {

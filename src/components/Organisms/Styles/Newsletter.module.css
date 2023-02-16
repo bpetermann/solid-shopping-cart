@@ -1,0 +1,12 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    align-items: center;
+    padding: 32px 0px;
+  }
+}
