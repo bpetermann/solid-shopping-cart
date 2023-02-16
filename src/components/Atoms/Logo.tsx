@@ -1,5 +1,5 @@
 import solidLogo from '../../logo.svg';
-import styles from './Logo.module.css';
+import styles from './Styles/Logo.module.css';
 import { Component } from 'solid-js';
 
 const Logo: Component = () => (

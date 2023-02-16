@@ -1,4 +1,4 @@
-import styles from './NavbarMobile.module.css';
+import styles from './Styles/NavbarMobile.module.css';
 import { MenuButton } from '@/components/Atoms';
 import { Component, For } from 'solid-js';
 

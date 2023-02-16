@@ -1,5 +1,5 @@
 import Container from '../../Atoms/Container';
-import styles from './Navbar.module.css';
+import styles from './Styles/Navbar.module.css';
 import { Component, For } from 'solid-js';
 import { MenuButton, Logo } from '@/components/Atoms';
 

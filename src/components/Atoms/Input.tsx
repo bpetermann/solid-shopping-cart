@@ -1,4 +1,4 @@
-import styles from './Input.module.css';
+import styles from './Styles/Input.module.css';
 import { Component } from 'solid-js';
 import type { JSX } from 'solid-js';
 
