@@ -4,7 +4,9 @@ import { Container, Spinner } from '@/components/Atoms';
 import styles from './Styles/Products.module.css';
 import { Product } from '@/components/Molecules';
 
-const Products: Component = () => {
+const Products: Component<{
+  addProduct: (product: ProductType) => void;
+}> = (props) => {
   const fetchUser = async () => {
     const res = await fetch(
       `https://my-json-server.typicode.com/bpetermann/shopping-cart-jsonserver/storeItems`
@@ -30,7 +32,7 @@ const Products: Component = () => {
         <For each={products()}>
           {(product) => (
             <li>
-              <Product product={product} />
+              <Product product={product}  addProduct={props.addProduct}/>
             </li>
           )}
         </For>

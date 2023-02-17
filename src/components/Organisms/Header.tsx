@@ -6,13 +6,17 @@ import {
 } from '@/components/Molecules';
 import { Component, createSignal } from 'solid-js';
 
-const Header: Component = () => {
+const Header: Component<{
+  setShowCart: (show: boolean) => void;
+  showCart: boolean;
+}> = (props) => {
   const [showInfo, setShowInfo] = createSignal<boolean>(true);
   const [isOpen, setIsOpen] = createSignal<boolean>(false);
   const [searchTerm, setSearchTerm] = createSignal<string>('');
   const [category, setCategory] = createSignal<
     { id: number; name: string } | undefined
   >();
+
   const categories: { id: number; name: string }[] = [
     { id: 1, name: 'Shoes' },
     { id: 2, name: 'Bags' },
@@ -40,8 +44,10 @@ const Header: Component = () => {
     <header>
       {showInfo() && <InfoBar closeInfo={closeInfo} />}
       <Navbar
+        setShowCart={props.setShowCart}
         changeCategory={changeCategory}
         categories={mainCategories}
+        showCart={props.showCart}
         active={category()}
       />
       <SearchBar

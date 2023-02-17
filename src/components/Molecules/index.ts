@@ -5,3 +5,4 @@ export { default as SearchBar } from './Header/SearchBar';
 export { default as Product } from './Products/Product';
 export { default as NewsletterForm } from './Newsletter/NewsletterForm';
 export { default as FrequentQuestion } from './Faqs/FrequentQuestion';
+export { default as Modal } from './Cart/Modal';
