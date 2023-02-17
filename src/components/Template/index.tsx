@@ -8,13 +8,12 @@ import {
 import type { Component } from 'solid-js';
 
 const Template: Component = () => (
-  <>
-    <Header />
+  <main>
     <Hero />
     <Products />
     <Newsletter />
     <Faqs />
-  </>
+  </main>
 );
 
 export default Template;
