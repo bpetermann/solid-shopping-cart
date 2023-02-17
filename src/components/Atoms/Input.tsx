@@ -7,17 +7,17 @@ const Input: Component<{
   marker: string;
   classname?: string;
   setInput: (value: string) => void;
-}> = ({ value, setInput, marker, classname }) => {
+}> = (props) => {
   const onInput: JSX.EventHandler<HTMLInputElement, InputEvent> = (event) => {
-    setInput(event.currentTarget.value);
+    props.setInput(event.currentTarget.value);
   };
 
   return (
     <input
       type='text'
-      placeholder={marker ?? 'Search'}
-      class={`${styles.input} ${styles[classname ?? '']}`}
-      value={value}
+      placeholder={props.marker ?? 'Search'}
+      class={`${styles.input} ${styles[props.classname ?? '']}`}
+      value={props.value}
       onInput={onInput}
     />
   );

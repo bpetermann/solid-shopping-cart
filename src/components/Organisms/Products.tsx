@@ -1,4 +1,4 @@
-import { Component, createResource, createSignal, For } from 'solid-js';
+import { Component, createResource, createSignal, For, Show } from 'solid-js';
 import type { ProductType } from '@/types/product.type';
 import { Container, Spinner } from '@/components/Atoms';
 import styles from './Styles/Products.module.css';
@@ -21,11 +21,11 @@ const Products: Component = () => {
 
   return (
     <Container classname='products'>
-      {data.loading && (
+      <Show when={data.loading}>
         <div class={styles.loading}>
           <Spinner />
         </div>
-      )}
+      </Show>
       <ul class={styles.products}>
         <For each={products()}>
           {(product) => (
@@ -35,7 +35,9 @@ const Products: Component = () => {
           )}
         </For>
       </ul>
-      {data.error && <p class={styles.error}>Something went wrong!</p>}
+      <Show when={data.error}>
+        <p class={styles.error}>Something went wrong!</p>
+      </Show>
     </Container>
   );
 };

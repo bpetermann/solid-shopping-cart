@@ -5,13 +5,13 @@ const SearchBar: Component<{
   toggleMenu: () => void;
   setSearchTerm: (value: string) => void;
   value: string;
-}> = ({ toggleMenu, value, setSearchTerm }) => {
+}> = (props) => {
   return (
     <Container classname='searchbar'>
-      <BurgerButton onClick={toggleMenu} />
+      <BurgerButton onClick={props.toggleMenu} />
       <Input
-        value={value}
-        setInput={setSearchTerm}
+        value={props.value}
+        setInput={props.setSearchTerm}
         classname='search'
         marker='Search'
       />

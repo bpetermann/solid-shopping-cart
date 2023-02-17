@@ -17,7 +17,9 @@ const InfoBar: Component<{
               <li>
                 <MenuButton
                   classname={
-                    props.active?.name === category.name ? 'desktop-active' : 'desktop'
+                    props.active?.name === category.name
+                      ? 'desktop-active'
+                      : 'desktop'
                   }
                   onClick={() => props.changeCategory(category.id)}
                 >
