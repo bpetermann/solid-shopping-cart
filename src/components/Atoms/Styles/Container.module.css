@@ -87,3 +87,21 @@
     flex-direction: column;
   }
 }
+
+/* FAQs */
+.faqs {
+  background-color: transparent;
+}
+.faqs > div {
+  max-width: 960px;
+  margin-bottom: 64px;
+}
+@media (max-width: 768px) {
+  .faqs {
+    background-color: #efeff0;
+    border-bottom: none;
+  }
+  .faqs > div {
+    padding: 0px;
+  }
+}

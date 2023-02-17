@@ -1,5 +1,11 @@
+import {
+  Header,
+  Hero,
+  Products,
+  Newsletter,
+  Faqs,
+} from '@/components/Organisms';
 import type { Component } from 'solid-js';
-import { Header, Hero, Products, Newsletter } from '@/components/Organisms';
 
 const Template: Component = () => (
   <>
@@ -7,6 +13,7 @@ const Template: Component = () => (
     <Hero />
     <Products />
     <Newsletter />
+    <Faqs />
   </>
 );
 
