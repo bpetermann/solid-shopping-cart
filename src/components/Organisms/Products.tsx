@@ -37,15 +37,17 @@ const Products: Component<{
           <Spinner />
         </div>
       </Show>
-      <ul class={styles.products}>
-        <For each={searchProducts()}>
-          {(product) => (
-            <li>
-              <Product product={product} />
-            </li>
-          )}
-        </For>
-      </ul>
+      <Show when={!!products()?.length}>
+        <ul class={styles.products}>
+          <For each={searchProducts()}>
+            {(product) => (
+              <li>
+                <Product product={product} />
+              </li>
+            )}
+          </For>
+        </ul>
+      </Show>
       <Show when={data.error}>
         <p class={styles.error}>Something went wrong!</p>
       </Show>
