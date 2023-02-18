@@ -5,7 +5,7 @@ import { Component } from 'solid-js';
 const Logo: Component = () => (
   <section class={styles.logo}>
     <div>
-      <img src={solidLogo} class='logo solid' alt='Solid Logo' />
+      <img src={solidLogo} class={styles['logo-solid']} alt='Solid Logo' />
     </div>
     <a href='/'> shopping cart </a>
   </section>

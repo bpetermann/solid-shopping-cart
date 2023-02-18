@@ -1,0 +1,98 @@
+.toast {
+  position: fixed;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  animation: fadeIn 0.2s, slideIn 0.4s ease-in-out;
+  color: #efeff0;
+  top: 25%;
+  left: 35%;
+  width: 30%;
+  border-radius: 5px;
+  background-color: red;
+  overflow: scroll;
+  z-index: 10;
+  overflow: hidden;
+}
+.success {
+  background-color: #00875a;
+}
+
+.toast > div:first-of-type {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.toast > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  margin-bottom: 18px;
+}
+
+.close > img {
+  height: 100%;
+  filter: invert(95%) sepia(0%) saturate(7500%) hue-rotate(26deg)
+    brightness(107%) contrast(108%);
+}
+
+.inner,
+.outer {
+  height: 16px;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.outer {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: -1px;
+}
+
+.inner {
+  width: 40%;
+  background-color: #efeff0;
+}
+
+@media (max-width: 768px) {
+  .toast {
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 384px) {
+  section {
+    left: 5%;
+    width: 90%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(300px);
+    animation-timing-function: ease-out;
+  }
+  60% {
+    transform: translateX(-20px);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: translateX(10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0px);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
