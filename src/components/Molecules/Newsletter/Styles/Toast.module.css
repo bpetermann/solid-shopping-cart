@@ -91,7 +91,7 @@
 }
 
 @media (max-width: 384px) {
-  section {
+  .toast {
     left: 5%;
     width: 90%;
   }
