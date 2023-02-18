@@ -5,15 +5,17 @@ import {
   NavbarMobile,
 } from '@/components/Molecules';
 import { Component, createSignal } from 'solid-js';
+import type { Setter } from 'solid-js';
 
 const Header: Component<{
   setShowCart: (show: boolean) => void;
+  setSearchTerm: Setter<string>;
   cartLength: number;
   showCart: boolean;
+  value: string;
 }> = (props) => {
   const [showInfo, setShowInfo] = createSignal<boolean>(true);
   const [isOpen, setIsOpen] = createSignal<boolean>(false);
-  const [searchTerm, setSearchTerm] = createSignal<string>('');
   const categories: { id: number; name: string }[] = [
     { id: 1, name: 'Shoes' },
     { id: 2, name: 'Bags' },
@@ -52,9 +54,9 @@ const Header: Component<{
         active={category()}
       />
       <SearchBar
-        setSearchTerm={setSearchTerm}
+        setSearchTerm={props.setSearchTerm}
+        value={props.value}
         toggleMenu={toggleMenu}
-        value={searchTerm()}
       />
       {isOpen() && (
         <NavbarMobile

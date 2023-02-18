@@ -7,6 +7,7 @@ const Template: Component<{
   addProduct: (product: ProductType) => void;
   setShowCart: (show: boolean) => void;
   showCart: boolean;
+  value: string;
   cart: ProductType[];
 }> = (props) => (
   <main>
@@ -16,11 +17,10 @@ const Template: Component<{
         setShowCart={props.setShowCart}
         addProduct={props.addProduct}
         cart={props.cart}
-
       />
     )}
     <Hero />
-    <Products addProduct={props.addProduct} />
+    <Products addProduct={props.addProduct} value={props.value} />
     <Newsletter />
     <Faqs />
   </main>

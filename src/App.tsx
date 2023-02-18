@@ -6,6 +6,7 @@ import { ProductType } from './types/product.type';
 const App: Component = () => {
   const [cart, setCart] = createSignal<ProductType[]>([]);
   const [showCart, setShowCart] = createSignal<boolean>(false);
+  const [searchTerm, setSearchTerm] = createSignal<string>('');
 
   const cartLength = () =>
     cart().reduce(function (acc, item) {
@@ -51,21 +52,24 @@ const App: Component = () => {
   };
 
   createEffect(() => {
-    console.log(showCart());
+    console.log(searchTerm());
   });
 
   return (
     <>
       <Header
+        setSearchTerm={setSearchTerm}
         setShowCart={setShowCart}
         cartLength={cartLength()}
         showCart={showCart()}
+        value={searchTerm()}
       />
       <Template
         removeProduct={removeProduct}
         setShowCart={setShowCart}
         addProduct={addProduct}
         showCart={showCart()}
+        value={searchTerm()}
         cart={cart()}
       />
       <Footer />

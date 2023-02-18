@@ -6,6 +6,7 @@ import { Product } from '@/components/Molecules';
 
 const Products: Component<{
   addProduct: (product: ProductType) => void;
+  value: string;
 }> = (props) => {
   const fetchUser = async () => {
     const res = await fetch(
@@ -21,6 +22,11 @@ const Products: Component<{
   const [products, setProducts] = createSignal<ProductType[]>();
   const [data] = createResource(fetchUser);
 
+  const searchProducts = () =>
+    products()?.filter((item) => {
+      return item.description.toLowerCase().includes(props.value.toLowerCase());
+    });
+
   return (
     <Container classname='products'>
       <Show when={data.loading}>
@@ -29,10 +35,10 @@ const Products: Component<{
         </div>
       </Show>
       <ul class={styles.products}>
-        <For each={products()}>
+        <For each={searchProducts()}>
           {(product) => (
             <li>
-              <Product product={product}  addProduct={props.addProduct}/>
+              <Product product={product} addProduct={props.addProduct} />
             </li>
           )}
         </For>
