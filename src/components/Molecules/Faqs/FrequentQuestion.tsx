@@ -1,5 +1,5 @@
 import styles from './Styles/FrequentQuestion.module.css';
-import { Component, createEffect, createSignal } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 
 const FrequentQuestion: Component<{
   icon: string;

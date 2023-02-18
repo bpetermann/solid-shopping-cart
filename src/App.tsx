@@ -1,7 +1,7 @@
 import { Header, Footer } from '@/components/Organisms';
-import { Component, createEffect, createSignal } from 'solid-js';
-import Template from './components/Template';
+import { Component, createSignal } from 'solid-js';
 import { ProductType } from './types/product.type';
+import Template from './components/Template';
 
 const App: Component = () => {
   const [cart, setCart] = createSignal<ProductType[]>([]);
@@ -62,10 +62,6 @@ const App: Component = () => {
   const [category, setCategory] = createSignal<{ id: number; name: string }>(
     categories[0]
   );
-
-  createEffect(() => {
-    console.log(searchTerm());
-  });
 
   return (
     <>

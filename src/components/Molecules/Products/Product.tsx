@@ -1,5 +1,6 @@
 import type { ProductType } from '@/types/product.type';
 import styles from './Styles/Product.module.css';
+import { AddButton } from '@/components/Atoms';
 import { Component } from 'solid-js';
 
 const Product: Component<{
@@ -16,7 +17,7 @@ const Product: Component<{
     </div>
     <p>{props.product.description}</p>
     <p>{props.product.price} $</p>
-    <button onClick={() => props.addProduct(props.product)}>Add to cart</button>
+    <AddButton onClick={() => props.addProduct(props.product)} />
   </div>
 );
 

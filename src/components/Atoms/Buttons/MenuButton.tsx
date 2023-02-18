@@ -1,5 +1,5 @@
-import { ParentComponent } from 'solid-js';
 import styles from './Styles/MenuButton.module.css';
+import { ParentComponent } from 'solid-js';
 
 const Close: ParentComponent<{ onClick: () => void; classname?: string }> = (
   props

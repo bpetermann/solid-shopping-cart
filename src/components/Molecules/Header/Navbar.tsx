@@ -1,7 +1,7 @@
-import Container from '../../Atoms/Container';
-import styles from './Styles/Navbar.module.css';
-import { Component, For } from 'solid-js';
 import { MenuButton, Logo } from '@/components/Atoms';
+import styles from './Styles/Navbar.module.css';
+import Container from '../../Atoms/Container';
+import { Component, For } from 'solid-js';
 
 const InfoBar: Component<{
   categories: { id: number; name: string }[];

@@ -1,7 +1,7 @@
-import { Container } from '@/components/Atoms';
 import { FrequentQuestion } from '@/components/Molecules';
-import { Component, For } from 'solid-js';
+import { Container } from '@/components/Atoms';
 import styles from './Styles/Faqs.module.css';
+import { Component, For } from 'solid-js';
 
 const Header: Component = () => {
   const questions: { icon: string; question: string; answer: string }[] = [

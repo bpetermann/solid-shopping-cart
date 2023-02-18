@@ -1,7 +1,7 @@
-import { Container } from '@/components/Atoms';
+import NewsletterForm from '../Molecules/Newsletter/NewsletterForm';
 import styles from './Styles/Newsletter.module.css';
 import { Component, createSignal } from 'solid-js';
-import NewsletterForm from '../Molecules/Newsletter/NewsletterForm';
+import { Container } from '@/components/Atoms';
 
 const Newsletter: Component = () => {
   const [email, setEmail] = createSignal<string>('');

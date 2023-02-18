@@ -1,3 +1,4 @@
+export { default as AddButton } from './Buttons/AddButton';
 export { default as BurgerButton } from './Buttons/BurgerButton';
 export { default as BaseButton } from './Buttons/BaseButton';
 export { default as Close } from './Buttons/Close';
