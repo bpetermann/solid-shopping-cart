@@ -5,7 +5,6 @@ import styles from './Styles/Products.module.css';
 import { Product } from '@/components/Molecules';
 
 const Products: Component<{
-  addProduct: (product: ProductType) => void;
   category: { id: number; name: string };
   value: string;
 }> = (props) => {
@@ -42,7 +41,7 @@ const Products: Component<{
         <For each={searchProducts()}>
           {(product) => (
             <li>
-              <Product product={product} addProduct={props.addProduct} />
+              <Product product={product} />
             </li>
           )}
         </For>

@@ -9,7 +9,7 @@ const FrequentQuestion: Component<{
   const [open, setOpen] = createSignal(false);
 
   return (
-    <li class={`${styles.faq} ${open() ? styles.isOpen : ``}`}>
+    <li class={`${styles.faq} ${open() && styles.isOpen}`}>
       <div>
         <div class={styles.question}>
           <img src={`/images/${props.icon}.png`} alt={`${props.icon} icon`} />

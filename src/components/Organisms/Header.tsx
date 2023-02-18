@@ -5,22 +5,19 @@ import {
   NavbarMobile,
 } from '@/components/Molecules';
 import { Component, createSignal } from 'solid-js';
+import { categories } from '@/lib/categories';
 import type { Setter } from 'solid-js';
 
 const Header: Component<{
   setCategory: Setter<{ id: number; name: string }>;
-  categories: { id: number; name: string }[];
   category: { id: number; name: string };
   setShowCart: (show: boolean) => void;
   setSearchTerm: Setter<string>;
-  cartLength: number;
   showCart: boolean;
   value: string;
 }> = (props) => {
   const [showInfo, setShowInfo] = createSignal<boolean>(true);
   const [isOpen, setIsOpen] = createSignal<boolean>(false);
-
-  const mainCategories = props.categories.filter((item) => item.id < 3);
 
   const closeInfo = () => {
     setShowInfo(false);
@@ -31,7 +28,7 @@ const Header: Component<{
   };
 
   const changeCategory = (id: number) => {
-    let cat = props.categories.find((item) => item.id === id);
+    let cat = categories.find((item) => item.id === id);
     if (cat) props.setCategory(cat);
   };
 
@@ -41,22 +38,16 @@ const Header: Component<{
       <Navbar
         setShowCart={props.setShowCart}
         changeCategory={changeCategory}
-        cartLength={props.cartLength}
-        categories={mainCategories}
         showCart={props.showCart}
         active={props.category}
       />
       <SearchBar
         setSearchTerm={props.setSearchTerm}
-        value={props.value}
         toggleMenu={toggleMenu}
+        value={props.value}
       />
       {isOpen() && (
-        <NavbarMobile
-          changeCategory={changeCategory}
-          categories={props.categories}
-          active={props.category}
-        />
+        <NavbarMobile changeCategory={changeCategory} active={props.category} />
       )}
     </header>
   );

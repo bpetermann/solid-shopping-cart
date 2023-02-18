@@ -55,20 +55,6 @@
   background-color: #efeff0;
 }
 
-@media (max-width: 768px) {
-  .toast {
-    left: 10%;
-    width: 80%;
-  }
-}
-
-@media (max-width: 384px) {
-  section {
-    left: 5%;
-    width: 90%;
-  }
-}
-
 @keyframes slideIn {
   0% {
     transform: translateX(300px);
@@ -94,5 +80,19 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast {
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 384px) {
+  section {
+    left: 5%;
+    width: 90%;
   }
 }

@@ -1,16 +1,16 @@
 import styles from './Styles/NavbarMobile.module.css';
 import { MenuButton } from '@/components/Atoms';
+import { categories } from '@/lib/categories';
 import { Component, For } from 'solid-js';
 
 const NavbarMobile: Component<{
   changeCategory: (id: number) => void;
-  categories: { id: number; name: string }[];
   active: { id: number; name: string } | undefined;
 }> = (props) => {
   return (
     <nav class={styles.navbar}>
       <ul class={styles.categories}>
-        <For each={props.categories}>
+        <For each={categories}>
           {(category) => (
             <li>
               <MenuButton

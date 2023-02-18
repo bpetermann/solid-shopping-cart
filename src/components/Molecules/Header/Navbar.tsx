@@ -1,21 +1,25 @@
 import { MenuButton, Logo } from '@/components/Atoms';
 import styles from './Styles/Navbar.module.css';
+import { useCart } from '@/store/cart-context';
+import { categories } from '@/lib/categories';
 import Container from '../../Atoms/Container';
 import { Component, For } from 'solid-js';
 
 const InfoBar: Component<{
-  categories: { id: number; name: string }[];
   setShowCart: (show: boolean) => void;
   changeCategory: (id: number) => void;
   active: { id: number; name: string };
-  cartLength: number;
   showCart: boolean;
 }> = (props) => {
+  const [_, { cartLength }] = useCart()!;
+
+  const mainCategories = categories.filter((item) => item.id < 3);
+
   return (
     <Container classname='navbar'>
       <nav class={styles.navbar}>
         <ul class={styles.categories}>
-          <For each={props.categories}>
+          <For each={mainCategories}>
             {(category) => (
               <li>
                 <MenuButton
@@ -37,7 +41,7 @@ const InfoBar: Component<{
       <div class={styles.cart}>
         <button onClick={() => props.setShowCart(!props.showCart)}>
           <img src='/images/cart.png' alt='cart' class={styles.cartImage} />
-          <span class={styles.cartAmount}>{props.cartLength}</span>
+          <span class={styles.cartAmount}>{cartLength()}</span>
         </button>
       </div>
     </Container>
