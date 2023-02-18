@@ -8,15 +8,12 @@ import { Component, createSignal } from 'solid-js';
 
 const Header: Component<{
   setShowCart: (show: boolean) => void;
+  cartLength: number;
   showCart: boolean;
 }> = (props) => {
   const [showInfo, setShowInfo] = createSignal<boolean>(true);
   const [isOpen, setIsOpen] = createSignal<boolean>(false);
   const [searchTerm, setSearchTerm] = createSignal<string>('');
-  const [category, setCategory] = createSignal<
-    { id: number; name: string } | undefined
-  >();
-
   const categories: { id: number; name: string }[] = [
     { id: 1, name: 'Shoes' },
     { id: 2, name: 'Bags' },
@@ -24,6 +21,9 @@ const Header: Component<{
     { id: 4, name: 'Men' },
     { id: 5, name: 'Sport' },
   ];
+  const [category, setCategory] = createSignal<{ id: number; name: string }>(
+    categories[0]
+  );
 
   const mainCategories = categories.filter((item) => item.id < 3);
 
@@ -37,7 +37,7 @@ const Header: Component<{
 
   const changeCategory = (id: number) => {
     let cat = categories.find((item) => item.id === id);
-    setCategory(cat);
+    setCategory(cat as { id: number; name: string });
   };
 
   return (
@@ -46,6 +46,7 @@ const Header: Component<{
       <Navbar
         setShowCart={props.setShowCart}
         changeCategory={changeCategory}
+        cartLength={props.cartLength}
         categories={mainCategories}
         showCart={props.showCart}
         active={category()}

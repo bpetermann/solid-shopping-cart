@@ -3,6 +3,7 @@ import { ProductType } from '@/types/product.type';
 import type { Component } from 'solid-js';
 
 const Template: Component<{
+  removeProduct: (product: ProductType) => void;
   addProduct: (product: ProductType) => void;
   setShowCart: (show: boolean) => void;
   showCart: boolean;
@@ -10,7 +11,13 @@ const Template: Component<{
 }> = (props) => (
   <main>
     {props.showCart && (
-      <Cart setShowCart={props.setShowCart} cart={props.cart} />
+      <Cart
+        removeProduct={props.removeProduct}
+        setShowCart={props.setShowCart}
+        addProduct={props.addProduct}
+        cart={props.cart}
+
+      />
     )}
     <Hero />
     <Products addProduct={props.addProduct} />

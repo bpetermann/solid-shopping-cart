@@ -5,7 +5,12 @@ import { ProductType } from './types/product.type';
 
 const App: Component = () => {
   const [cart, setCart] = createSignal<ProductType[]>([]);
-  const [showCart, setShowCart] = createSignal<boolean>(true);
+  const [showCart, setShowCart] = createSignal<boolean>(false);
+
+  const cartLength = () =>
+    cart().reduce(function (acc, item) {
+      return acc + item.amount;
+    }, 0);
 
   const addProduct = (product: ProductType) => {
     const existingCartItemIndex = cart().findIndex(
@@ -51,8 +56,13 @@ const App: Component = () => {
 
   return (
     <>
-      <Header setShowCart={setShowCart} showCart={showCart()} />
+      <Header
+        setShowCart={setShowCart}
+        cartLength={cartLength()}
+        showCart={showCart()}
+      />
       <Template
+        removeProduct={removeProduct}
         setShowCart={setShowCart}
         addProduct={addProduct}
         showCart={showCart()}

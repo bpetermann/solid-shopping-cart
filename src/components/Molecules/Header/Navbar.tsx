@@ -4,11 +4,12 @@ import { Component, For } from 'solid-js';
 import { MenuButton, Logo } from '@/components/Atoms';
 
 const InfoBar: Component<{
+  categories: { id: number; name: string }[];
   setShowCart: (show: boolean) => void;
   changeCategory: (id: number) => void;
-  categories: { id: number; name: string }[];
+  active: { id: number; name: string };
+  cartLength: number;
   showCart: boolean;
-  active: { id: number; name: string } | undefined;
 }> = (props) => {
   return (
     <Container classname='navbar'>
@@ -36,7 +37,7 @@ const InfoBar: Component<{
       <div class={styles.cart}>
         <button onClick={() => props.setShowCart(!props.showCart)}>
           <img src='/images/cart.png' alt='cart' class={styles.cartImage} />
-          <span class={styles.cartAmount}>0</span>
+          <span class={styles.cartAmount}>{props.cartLength}</span>
         </button>
       </div>
     </Container>

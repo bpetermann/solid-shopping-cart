@@ -1,5 +1,5 @@
-import styles from './Styles/Cart.module.css';
 import type { ParentComponent } from 'solid-js';
+import styles from './Styles/Modal.module.css';
 
 const Modal: ParentComponent<{ onClick: () => void }> = (props) => (
   <>

@@ -1,0 +1,46 @@
+.cart-item {
+  width: 100%;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d0d1d3;
+}
+
+.cart-item > div:first-child {
+  width: 50%;
+}
+
+.item-name {
+  text-align: left;
+}
+
+.item-sum {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.cart-item > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.add,
+.remove {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 16px;
+}
+
+.add:hover,
+.remove:hover {
+  border: 2px solid #000;
+  opacity: 0.8;
+}
