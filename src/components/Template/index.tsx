@@ -5,10 +5,11 @@ import type { Component } from 'solid-js';
 const Template: Component<{
   removeProduct: (product: ProductType) => void;
   addProduct: (product: ProductType) => void;
+  category: { id: number; name: string };
   setShowCart: (show: boolean) => void;
+  cart: ProductType[];
   showCart: boolean;
   value: string;
-  cart: ProductType[];
 }> = (props) => (
   <main>
     {props.showCart && (
@@ -20,7 +21,11 @@ const Template: Component<{
       />
     )}
     <Hero />
-    <Products addProduct={props.addProduct} value={props.value} />
+    <Products
+      addProduct={props.addProduct}
+      category={props.category}
+      value={props.value}
+    />
     <Newsletter />
     <Faqs />
   </main>

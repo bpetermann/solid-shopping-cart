@@ -6,6 +6,7 @@ import { Product } from '@/components/Molecules';
 
 const Products: Component<{
   addProduct: (product: ProductType) => void;
+  category: { id: number; name: string };
   value: string;
 }> = (props) => {
   const fetchUser = async () => {
@@ -24,7 +25,10 @@ const Products: Component<{
 
   const searchProducts = () =>
     products()?.filter((item) => {
-      return item.description.toLowerCase().includes(props.value.toLowerCase());
+      return (
+        item.description.toLowerCase().includes(props.value.toLowerCase()) &&
+        item.category.includes(props.category.name)
+      );
     });
 
   return (
