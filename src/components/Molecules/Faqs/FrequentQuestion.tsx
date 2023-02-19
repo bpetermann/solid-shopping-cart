@@ -19,9 +19,11 @@ const FrequentQuestion: Component<{
           <img src='/images/expand.png' alt='Arrow icon' />
         </button>
       </div>
+      {open() && (
       <div class={styles.answer}>
         <p>{props.answer}</p>
-      </div>
+      </div>)
+      }
     </li>
   );
 };

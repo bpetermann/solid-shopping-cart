@@ -4,8 +4,6 @@
   width: 100%;
   border-bottom: 1px solid #d0d1d3;
   padding: 0px 32px;
-  height: 59px;
-  overflow: hidden;
 }
 
 .faq > div:first-child {
@@ -50,9 +48,6 @@
 
 .isOpen {
   border-bottom: none;
-  transition: all 0.2s ease-in-out;
-  height: 100%;
-  overflow: visible;
 }
 
 .isOpen img:last-child {
