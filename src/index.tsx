@@ -1,9 +1,10 @@
 /* @refresh reload */
-import { render } from 'solid-js/web';
+import { I18nContext, createI18nContext } from '@solid-primitives/i18n';
 import { CartProvider } from '@/store/cart-context';
-
-import './index.css';
+import { render } from 'solid-js/web';
+import { dict } from './lib/dict';
 import App from './App';
+import './index.css';
 
 const root = document.getElementById('root');
 
@@ -13,11 +14,15 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
+const value = createI18nContext(dict, 'en');
+
 render(
   () => (
-    <CartProvider>
-      <App />
-    </CartProvider>
+    <I18nContext.Provider value={value}>
+      <CartProvider>
+        <App />
+      </CartProvider>
+    </I18nContext.Provider>
   ),
   root!
 );

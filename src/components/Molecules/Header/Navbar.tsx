@@ -1,4 +1,4 @@
-import { MenuButton, Logo } from '@/components/Atoms';
+import { MenuButton, Logo, LanguageSelect } from '@/components/Atoms';
 import styles from './Styles/Navbar.module.css';
 import { useCart } from '@/store/cart-context';
 import { categories } from '@/lib/categories';
@@ -36,6 +36,7 @@ const InfoBar: Component<{
             )}
           </For>
         </ul>
+        <LanguageSelect />
       </nav>
       <Logo />
       <div class={styles.cart}>
