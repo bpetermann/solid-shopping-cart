@@ -1,8 +1,11 @@
+import { Container, LanguageSelect } from '@/components/Atoms';
+import { useI18n } from '@solid-primitives/i18n';
 import styles from './Styles/Footer.module.css';
-import { Container } from '@/components/Atoms';
 import { Component, For } from 'solid-js';
 
 const Footer: Component = () => {
+  const [t] = useI18n();
+
   const pageLinks: string[] = [
     'About',
     'Imprint',
@@ -22,11 +25,11 @@ const Footer: Component = () => {
       <Container classname='footer'>
         <nav class={styles.links}>
           <ul>
-            <For each={pageLinks}>{(link) => <li>{link}</li>}</For>
+            <For each={pageLinks}>{(link) => <li>{t(`${link}`)}</li>}</For>
           </ul>
         </nav>
         <nav class={styles.social}>
-          Find more inspiration:
+          {t('Find more inspiration:')}
           <ul>
             <For each={socialMediaLinks}>
               {(social) => (
@@ -37,6 +40,9 @@ const Footer: Component = () => {
             </For>
           </ul>
         </nav>
+        <div class={styles.lang}>
+          <LanguageSelect />
+        </div>
       </Container>
     </footer>
   );

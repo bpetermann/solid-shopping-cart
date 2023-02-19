@@ -1,4 +1,5 @@
 import { Input, Container, BurgerButton } from '@/components/Atoms';
+import { useI18n } from '@solid-primitives/i18n';
 import { Component } from 'solid-js';
 
 const SearchBar: Component<{
@@ -6,6 +7,8 @@ const SearchBar: Component<{
   setSearchTerm: (value: string) => void;
   value: string;
 }> = (props) => {
+  const [t] = useI18n();
+
   return (
     <Container classname='searchbar'>
       <BurgerButton onClick={props.toggleMenu} />
@@ -13,7 +16,7 @@ const SearchBar: Component<{
         value={props.value}
         setInput={props.setSearchTerm}
         classname='search'
-        marker='Search'
+        marker={t('Search')}
       />
     </Container>
   );

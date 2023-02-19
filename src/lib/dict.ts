@@ -25,8 +25,7 @@ export const dict = {
     'Add my Email': 'Anmeldung bestätigen',
     'Invalid input': 'Ungültige Eingabe',
     'Email was added': 'Email hinzugefügt',
-    'You can unsubscribe at any time free of charge. Just a demo, no emails are stored':
-      'Du kannst dich jederzeit kostenlos abmelden. Nur eine Demo, es werden keine Emails gespeichert',
+    Unsubscribe: 'Du kannst dich jederzeit kostenlos abmelden. Nur eine Demo, es werden keine Emails gespeichert',
     'Help & Contact': 'Hilfe & Kontakt',
     'When you complete your order, we will show you in what timeframe your package is expected to arrive':
       'Wenn du deine Bestellung abschließt, zeigen wir dir, in welchem Zeitrahmen dein Paket voraussichtlich eintreffen wird',
@@ -68,8 +67,7 @@ export const dict = {
     'Add my Email': 'Add my Email',
     'Invalid input': 'Invalid input',
     'Email was added': 'Email was added',
-    'You can unsubscribe at any time free of charge. Just a demo, no emails are stored':
-      'You can unsubscribe at any time free of charge. Just a demo, no emails are stored',
+    Unsubscribe: 'You can unsubscribe at any time free of charge. Just a demo, no emails are stored',
     'Help & Contact': 'Help & Contact',
     'When you complete your order, we will show you in what timeframe your package is expected to arrive':
       'When you complete your order, we will show you in what timeframe your package is expected to arrive',

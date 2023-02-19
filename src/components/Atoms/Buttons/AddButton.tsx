@@ -1,8 +1,10 @@
 import styles from './Styles/AddButton.module.css';
 import { Component, createSignal } from 'solid-js';
+import { useI18n } from '@solid-primitives/i18n';
 
 const AddButton: Component<{ onClick: () => void }> = (props) => {
   const [style, setStyle] = createSignal<string>('');
+  const [t] = useI18n();
 
   const add = () => {
     setStyle('loading');
@@ -23,7 +25,7 @@ const AddButton: Component<{ onClick: () => void }> = (props) => {
           alt='Loading...'
         />
       ) : (
-        'Add to cart'
+        <p>{t('Add to Cart')}</p>
       )}
     </button>
   );

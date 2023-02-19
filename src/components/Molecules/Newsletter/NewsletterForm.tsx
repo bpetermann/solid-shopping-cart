@@ -1,5 +1,6 @@
 import { Input, BaseButton, Radio } from '@/components/Atoms';
 import styles from './Styles/Newsletter.module.css';
+import { useI18n } from '@solid-primitives/i18n';
 import { Component, For } from 'solid-js';
 
 const NewsletterForm: Component<{
@@ -13,6 +14,7 @@ const NewsletterForm: Component<{
     { value: 'wfashion', text: "Women's Fashion", name: 'interest' },
     { value: 'mfashion', text: "Men's Fashion", name: 'interest' },
   ];
+  const [t] = useI18n();
 
   return (
     <form
@@ -26,9 +28,9 @@ const NewsletterForm: Component<{
         setInput={props.setEmail}
         classname={'primary'}
         value={props.email}
-        marker={'Your Email'}
+        marker={t('Your Email')}
       />
-      <p>I am mostly interested in</p>
+      <p>{t('I am mostly interested in')}</p>
       <For each={interestedOptions}>
         {(option) => (
           <Radio
@@ -37,18 +39,15 @@ const NewsletterForm: Component<{
             value={option.value}
             setInput={props.setInterestedIn}
           >
-            {option.text}
+            {t(`${option.text}`)}
           </Radio>
         )}
       </For>
       <BaseButton>
         <img src='/images/mail.png' alt='Mail icon' class={styles.icon} />
-        <p>Add my Email</p>
+        <p> {t(`Add my Email`)}</p>
       </BaseButton>
-      <p class={styles.info}>
-        You can unsubscribe at any time free of charge. Just a demo, no emails
-        are stored
-      </p>
+      <p class={styles.info}>{t('Unsubscribe')}</p>
     </form>
   );
 };

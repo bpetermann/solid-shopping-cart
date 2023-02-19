@@ -1,4 +1,5 @@
 import { MenuButton, Logo, LanguageSelect } from '@/components/Atoms';
+import { useI18n } from '@solid-primitives/i18n';
 import styles from './Styles/Navbar.module.css';
 import { useCart } from '@/store/cart-context';
 import { categories } from '@/lib/categories';
@@ -12,6 +13,7 @@ const InfoBar: Component<{
   showCart: boolean;
 }> = (props) => {
   const [_, { cartLength }] = useCart()!;
+  const [t] = useI18n();
 
   const mainCategories = categories.filter((item) => item.id < 3);
 
@@ -30,7 +32,7 @@ const InfoBar: Component<{
                   }
                   onClick={() => props.changeCategory(category.id)}
                 >
-                  {category.name}
+                  {t(`${category.name}`)}
                 </MenuButton>
               </li>
             )}

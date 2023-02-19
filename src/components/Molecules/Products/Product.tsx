@@ -1,8 +1,8 @@
 import type { ProductType } from '@/types/product.type';
 import styles from './Styles/Product.module.css';
+import { useCart } from '@/store/cart-context';
 import { AddButton } from '@/components/Atoms';
 import { Component } from 'solid-js';
-import { useCart } from '@/store/cart-context';
 
 const Product: Component<{
   product: ProductType;

@@ -46,8 +46,17 @@
   display: flex;
 }
 
+.lang {
+  display: none;
+  padding-bottom: 16px;
+}
+
 @media (max-width: 768px) {
   .social {
     text-align: center;
+  }
+
+  .lang {
+    display: block;
   }
 }
