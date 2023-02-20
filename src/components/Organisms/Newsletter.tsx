@@ -41,7 +41,7 @@ const Newsletter: Component = () => {
       </Container>
       {showToast() && (
         <Toast close={close} success={success()} time={4000}>
-          {success() ? t('Email was added') : t('Invalid Input')}
+          {success() ? t('Email was added') : t('Invalid input')}
         </Toast>
       )}
     </>
