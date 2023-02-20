@@ -25,15 +25,16 @@ export const dict = {
     'Add my Email': 'Anmeldung bestätigen',
     'Invalid input': 'Ungültige Eingabe',
     'Email was added': 'Email hinzugefügt',
-    Unsubscribe: 'Du kannst dich jederzeit kostenlos abmelden. Nur eine Demo, es werden keine Emails gespeichert',
-    'Help & Contact': 'Hilfe & Kontakt',
-    'When you complete your order, we will show you in what timeframe your package is expected to arrive':
+    Unsubscribe:
+      'Du kannst dich jederzeit kostenlos abmelden. Nur eine Demo, es werden keine Emails gespeichert',
+    'Help & Contact question': 'Hilfe & Kontakt',
+    'Help & Contact answer':
       'Wenn du deine Bestellung abschließt, zeigen wir dir, in welchem Zeitrahmen dein Paket voraussichtlich eintreffen wird',
-    'Gift cards': 'Gutscheine',
-    'You can redeem your promotional voucher in the last step of the order process. Enter the voucher code in the "Vouchers and discount codes" field.':
-      'Du kannst deinen Gutschein im letzten Schritt des Bestellvorgangs einlösen. Gib den Gutscheincode in das Feld "Gutscheine und Rabattcodes" ein.',
-    Shipping: 'Lieferung',
-    'If you are shipping internationally, there are several delivery speed options available during the checkout process, usually standard, express and priority delivery.':
+    'Gift cards question': 'Gutscheine',
+    'Gift cards Answer':
+      'Du kannst deinen Gutschein im letzten Schritt des Bestellvorgangs einlösen.',
+    'Shipping question': 'Lieferung',
+    'Shipping answer':
       'Beim internationalen Versand stehen dir während des Bestellvorgangs mehrere Optionen für die Liefergeschwindigkeit zur Verfügung, in der Regel Standard-, Express- und Priority-Lieferung.',
     About: 'Über uns',
     Imprint: 'Impressum',
@@ -67,15 +68,16 @@ export const dict = {
     'Add my Email': 'Add my Email',
     'Invalid input': 'Invalid input',
     'Email was added': 'Email was added',
-    Unsubscribe: 'You can unsubscribe at any time free of charge. Just a demo, no emails are stored',
-    'Help & Contact': 'Help & Contact',
-    'When you complete your order, we will show you in what timeframe your package is expected to arrive':
+    Unsubscribe:
+      'You can unsubscribe at any time free of charge. Just a demo, no emails are stored',
+    'Help & Contact question': 'Help & Contact',
+    'Help & Contact answer':
       'When you complete your order, we will show you in what timeframe your package is expected to arrive',
-    'Gift cards': 'Gift cards',
-    'You can redeem your promotional voucher in the last step of the order process. Enter the voucher code in the "Vouchers and discount codes" field.':
-      'You can redeem your promotional voucher in the last step of the order process. Enter the voucher code in the "Vouchers and discount codes" field.',
-    Shipping: 'Shipping',
-    'If you are shipping internationally, there are several delivery speed options available during the checkout process, usually standard, express and priority delivery.':
+    'Gift cards question': 'Gift cards',
+    'Gift cards answer':
+      'You can redeem your promotional voucher in the last step of the order process.',
+    'Shipping question': 'Shipping',
+    'Shipping answer':
       'If you are shipping internationally, there are several delivery speed options available during the checkout process, usually standard, express and priority delivery.',
     About: 'About',
     Imprint: 'Imprint',

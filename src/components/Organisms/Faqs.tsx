@@ -7,21 +7,18 @@ const Header: Component = () => {
   const questions: { icon: string; question: string; answer: string }[] = [
     {
       icon: 'mark',
-      question: 'Help & Contact',
-      answer:
-        'When you complete your order, we will show you in what timeframe your package is expected to arrive',
+      question: 'Help & Contact question',
+      answer: 'Help & Contact answer',
     },
     {
       icon: 'gift',
-      question: 'Gift cards',
-      answer:
-        'You can redeem your promotional voucher in the last step of the order process. Enter the voucher code in the "Vouchers and discount codes" field.',
+      question: 'Gift cards question',
+      answer: 'Gift cards answer',
     },
     {
       icon: 'shipping',
-      question: 'Shipping',
-      answer:
-        'If you are shipping internationally, there are several delivery speed options available during the checkout process, usually standard, express and priority delivery.',
+      question: 'Shipping question',
+      answer: 'Shipping answer',
     },
   ];
 
