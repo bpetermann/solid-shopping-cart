@@ -31,7 +31,7 @@ export const dict = {
     'Help & Contact answer':
       'Wenn du deine Bestellung abschließt, zeigen wir dir, in welchem Zeitrahmen dein Paket voraussichtlich eintreffen wird',
     'Gift cards question': 'Gutscheine',
-    'Gift cards Answer':
+    'Gift cards answer':
       'Du kannst deinen Gutschein im letzten Schritt des Bestellvorgangs einlösen.',
     'Shipping question': 'Lieferung',
     'Shipping answer':
