@@ -20,24 +20,20 @@ const InfoBar: Component<{
   return (
     <Container classname='navbar'>
       <nav class={styles.navbar}>
-        <ul class={styles.categories}>
-          <For each={mainCategories}>
-            {(category) => (
-              <li>
-                <MenuButton
-                  classname={
-                    props.active?.name === category.name
-                      ? 'desktop-active'
-                      : 'desktop'
-                  }
-                  onClick={() => props.changeCategory(category.id)}
-                >
-                  {t(`${category.name}`)}
-                </MenuButton>
-              </li>
-            )}
-          </For>
-        </ul>
+        <For each={mainCategories}>
+          {(category) => (
+            <MenuButton
+              classname={
+                props.active?.name === category.name
+                  ? 'desktop-active'
+                  : 'desktop'
+              }
+              onClick={() => props.changeCategory(category.id)}
+            >
+              {t(`${category.name}`)}
+            </MenuButton>
+          )}
+        </For>
         <LanguageSelect />
       </nav>
       <Logo />
