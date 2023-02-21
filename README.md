@@ -17,7 +17,7 @@
 
 ## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+[VS Code](https://code.visualstudio.com/)
 
 ```
 git clone https://github.com/bpetermann/solid-shopping-cart.git
