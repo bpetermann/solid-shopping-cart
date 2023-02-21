@@ -2,6 +2,8 @@
 
 - Just learning solid by rebuilding my [shopping-cart](https://github.com/bpetermann/svelte-shopping-cart) project with [solidJS](https://github.com/solidjs/solid)<br>
 - Structure follows the atomic design principles
+- Bilingualism via solid-primitives
+- [View live on Vercel](https://solid-shopping-cart.vercel.app/)
 
 ### Thanks
 
