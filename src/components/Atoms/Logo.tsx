@@ -7,7 +7,7 @@ const Logo: Component = () => (
     <div>
       <img src={solidLogo} class={styles['logo-solid']} alt='Solid Logo' />
     </div>
-    <a href='/'> shopping cart </a>
+    <h3> shopping cart </h3>
   </section>
 );
 
