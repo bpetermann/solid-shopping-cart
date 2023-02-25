@@ -12,7 +12,7 @@
   padding: 0;
 }
 
-.cart > div {
+.checkout {
   width: 100%;
   max-width: 300px;
   display: flex;
@@ -32,7 +32,13 @@
   cursor: pointer;
 }
 
-section > button:first-child {
+div > button:first-child {
   margin-top: 0px;
   max-width: unset;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
 }

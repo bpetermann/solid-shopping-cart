@@ -1,9 +1,5 @@
-import {
-  SearchBar,
-  InfoBar,
-  Navbar,
-  NavbarMobile,
-} from '@/components/Molecules';
+import { SearchBar, InfoBar, Navbar } from '@/components/Molecules';
+import { Cart, Favorites } from '@/components/Organisms';
 import { Component, createSignal } from 'solid-js';
 import { categories } from '@/lib/categories';
 import type { Setter } from 'solid-js';
@@ -11,22 +7,15 @@ import type { Setter } from 'solid-js';
 const Header: Component<{
   setCategory: Setter<{ id: number; name: string }>;
   category: { id: number; name: string };
-  setShowCart: (show: boolean) => void;
-  setShowFavorites: (show: boolean) => void;
   setSearchTerm: Setter<string>;
-  showFavorites: boolean;
-  showCart: boolean;
   value: string;
 }> = (props) => {
+  const [showFavorites, setShowFavorites] = createSignal<boolean>(false);
+  const [showCart, setShowCart] = createSignal<boolean>(false);
   const [showInfo, setShowInfo] = createSignal<boolean>(true);
-  const [isOpen, setIsOpen] = createSignal<boolean>(false);
 
   const closeInfo = () => {
     setShowInfo(false);
-  };
-
-  const toggleMenu: () => void = () => {
-    setIsOpen(!isOpen());
   };
 
   const changeCategory = (id: number) => {
@@ -35,24 +24,26 @@ const Header: Component<{
   };
 
   return (
-    <header>
-      {showInfo() && <InfoBar closeInfo={closeInfo} />}
-      <Navbar
-        setShowCart={props.setShowCart}
-        changeCategory={changeCategory}
-        setShowFavorites={props.setShowFavorites}
-        showCart={props.showCart}
-        active={props.category}
-      />
-      <SearchBar
-        setSearchTerm={props.setSearchTerm}
-        toggleMenu={toggleMenu}
-        value={props.value}
-      />
-      {isOpen() && (
-        <NavbarMobile changeCategory={changeCategory} active={props.category} />
-      )}
-    </header>
+    <>
+      <header>
+        {showInfo() && <InfoBar closeInfo={closeInfo} />}
+        <Navbar
+          setShowFavorites={setShowFavorites}
+          changeCategory={changeCategory}
+          setShowCart={setShowCart}
+          active={props.category}
+          showCart={showCart()}
+        />
+        <SearchBar
+          setSearchTerm={props.setSearchTerm}
+          changeCategory={changeCategory}
+          category={props.category}
+          value={props.value}
+        />
+      </header>
+      {showFavorites() && <Favorites setShowFavorites={setShowFavorites} />}
+      {showCart() && <Cart setShowCart={setShowCart} />}
+    </>
   );
 };
 

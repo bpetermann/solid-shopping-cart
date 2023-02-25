@@ -13,6 +13,7 @@ export const dict = {
     Search: 'Suche',
     Order: 'Bestellen',
     Favorites: 'Favoriten',
+    Cart: "Warenkorb ({{ amount }})",
     'The 3 Pairs of Shoes You Need for this Winter':
       'Die 3 Paar Schuhe, die du für diesen Winter brauchst',
     'Shop now': 'Jetzt shoppen',
@@ -57,6 +58,7 @@ export const dict = {
     Search: 'Search',
     Order: 'Order',
     Favorites: 'Favorites',
+    Cart: "Cart ({{ amount }})",
     'The 3 Pairs of Shoes You Need for this Winter':
       'The 3 Pairs of Shoes You Need for this Winter',
     'Shop now': 'Shop now',

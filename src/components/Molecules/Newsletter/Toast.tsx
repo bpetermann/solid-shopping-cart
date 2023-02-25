@@ -22,7 +22,7 @@ const Toast: ParentComponent<{
   });
 
   return (
-    <section class={`${styles.toast} ${props.success && styles.success}`}>
+    <div class={`${styles.toast} ${props.success && styles.success}`}>
       <div>
         <Close
           onClick={() => {
@@ -48,7 +48,7 @@ const Toast: ParentComponent<{
           }}
         />
       </div>
-    </section>
+    </div>
   );
 };
 
