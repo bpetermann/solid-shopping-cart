@@ -37,7 +37,11 @@ const InfoBar: Component<{
         <LanguageSelect />
       </nav>
       <Logo />
-      <div class={styles.cart}>
+      <div class={styles.container}>
+        <button>
+          <img src='/images/favorite.png' alt='favorite' class={styles.favoritesImage}/>
+          <span  class={styles.favoritesAmount}>0</span>
+        </button>
         <button onClick={() => props.setShowCart(!props.showCart)}>
           <img src='/images/cart.png' alt='cart' class={styles.cartImage} />
           <span class={styles.cartAmount}>{cartLength()}</span>

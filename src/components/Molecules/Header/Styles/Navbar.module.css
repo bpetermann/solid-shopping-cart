@@ -3,25 +3,27 @@
   text-align: start;
 }
 
-.cart {
+.container {
   min-width: 225px;
   height: 22px;
   text-align: end;
 }
 
-.cart > button {
+.container > button {
   all: unset;
   cursor: pointer;
   height: 22px;
   padding-right: 16px;
 }
 
-.cartImage {
+.cartImage,
+.favoritesImage {
   height: 100%;
   width: auto;
 }
 
-.cartAmount {
+.cartAmount,
+.favoritesAmount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +44,7 @@
     display: none;
   }
 
-  .cart {
+  .container {
     min-width: unset;
   }
 }

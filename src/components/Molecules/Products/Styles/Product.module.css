@@ -10,6 +10,7 @@
 .image {
   max-height: 224px;
   max-width: 160px;
+  position: relative;
 }
 
 .image > img {
@@ -18,3 +19,21 @@
   object-fit: cover;
 }
 
+.favorite {
+  all: unset;
+  cursor: pointer;
+  height: 22px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.favorite > img {
+  height: 100%;
+  width: auto;
+}
+
+.isFavorite {
+  filter: invert(40%) sepia(96%) saturate(1660%) hue-rotate(1deg)
+    brightness(103%) contrast(105%);
+}

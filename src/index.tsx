@@ -1,5 +1,6 @@
 /* @refresh reload */
 import { I18nContext, createI18nContext } from '@solid-primitives/i18n';
+import { FavoritesProvider } from '@/store/favorite-context';
 import { CartProvider } from '@/store/cart-context';
 import { render } from 'solid-js/web';
 import { dict } from './lib/dict';
@@ -19,9 +20,11 @@ const value = createI18nContext(dict, 'en');
 render(
   () => (
     <I18nContext.Provider value={value}>
-      <CartProvider>
-        <App />
-      </CartProvider>
+      <FavoritesProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </FavoritesProvider>
     </I18nContext.Provider>
   ),
   root!
