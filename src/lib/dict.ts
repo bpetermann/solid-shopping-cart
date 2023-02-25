@@ -12,6 +12,7 @@ export const dict = {
     'Total Amount': 'Gesamtsumme',
     Search: 'Suche',
     Order: 'Bestellen',
+    Favorites: 'Favoriten',
     'The 3 Pairs of Shoes You Need for this Winter':
       'Die 3 Paar Schuhe, die du für diesen Winter brauchst',
     'Shop now': 'Jetzt shoppen',
@@ -55,6 +56,7 @@ export const dict = {
     'Total Amount': 'Total Amount',
     Search: 'Search',
     Order: 'Order',
+    Favorites: 'Favorites',
     'The 3 Pairs of Shoes You Need for this Winter':
       'The 3 Pairs of Shoes You Need for this Winter',
     'Shop now': 'Shop now',

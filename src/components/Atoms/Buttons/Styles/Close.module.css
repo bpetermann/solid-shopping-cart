@@ -1,14 +1,20 @@
 .close {
-    all: unset;
-    cursor: pointer;
-    height: 18px;
-    margin-left: 8px;
-  }
-  
-  .close > img {
-    height: 100%;
-    width: auto;
-    filter: invert(95%) sepia(0%) saturate(7500%) hue-rotate(26deg)
-      brightness(107%) contrast(108%);
-  }
-  
+  all: unset;
+  cursor: pointer;
+  height: 18px;
+  margin-left: 8px;
+}
+
+.close > img {
+  height: 100%;
+  width: auto;
+}
+
+.light {
+  filter: invert(95%) sepia(0%) saturate(7500%) hue-rotate(26deg)
+    brightness(107%) contrast(108%);
+}
+
+.dark {
+  filter: none;
+}

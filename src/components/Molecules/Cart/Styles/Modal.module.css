@@ -21,6 +21,16 @@
   z-index: 10;
 }
 
+.favorites {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 5%;
+  bottom: 10%;
+  left: 30%;
+  width: 40%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -32,6 +42,11 @@
 
 @media (max-width: 768px) {
   .modal {
+    left: 5%;
+    width: 90%;
+  }
+
+  .favorites {
     left: 5%;
     width: 90%;
   }

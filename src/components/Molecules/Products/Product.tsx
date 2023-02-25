@@ -16,10 +16,6 @@ const Product: Component<{
     setIsFavorite(!!favorites().find((item) => item.id === props.product.id));
   });
 
-  createEffect(() => {
-    console.log(favorites());
-  });
-
   return (
     <div class={styles.container}>
       <div class={styles.image}>
@@ -37,7 +33,12 @@ const Product: Component<{
       </div>
       <p>{props.product.description}</p>
       <p>{props.product.price} $</p>
-      <AddButton onClick={() => addProduct(props.product)} />
+      <AddButton
+        onClick={() => {
+          addProduct(props.product);
+          isFavorite() && toggleFavorite(props.product);
+        }}
+      />
     </div>
   );
 };

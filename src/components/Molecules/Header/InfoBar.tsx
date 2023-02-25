@@ -9,7 +9,7 @@ const InfoBar: Component<{ closeInfo: () => void }> = (props) => {
   return (
     <Container classname='infobar'>
       <p class={styles.info}>{t('FREE SHIPPING AND RETURNS')}</p>
-      <Close onClick={props.closeInfo} />
+      <Close onClick={props.closeInfo} classname='light' />
     </Container>
   );
 };

@@ -12,7 +12,9 @@ const Header: Component<{
   setCategory: Setter<{ id: number; name: string }>;
   category: { id: number; name: string };
   setShowCart: (show: boolean) => void;
+  setShowFavorites: (show: boolean) => void;
   setSearchTerm: Setter<string>;
+  showFavorites: boolean;
   showCart: boolean;
   value: string;
 }> = (props) => {
@@ -38,6 +40,7 @@ const Header: Component<{
       <Navbar
         setShowCart={props.setShowCart}
         changeCategory={changeCategory}
+        setShowFavorites={props.setShowFavorites}
         showCart={props.showCart}
         active={props.category}
       />

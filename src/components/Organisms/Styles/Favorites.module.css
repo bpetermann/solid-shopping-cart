@@ -1,0 +1,19 @@
+.favorites {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.favoritesList {
+  all: unset;
+  padding-top: 8px;
+}
+
+.favoritesList > li {
+  all: unset;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+}

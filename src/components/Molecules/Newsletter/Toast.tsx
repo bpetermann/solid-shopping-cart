@@ -29,6 +29,7 @@ const Toast: ParentComponent<{
             clearInterval(intervalid);
             props.close();
           }}
+          classname='light'
         />
       </div>
       <div class={styles.close}>
