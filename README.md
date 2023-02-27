@@ -21,7 +21,7 @@
 
 ```
 git clone https://github.com/bpetermann/solid-shopping-cart.git
-cd cv-application
+cd solid-shopping-cart
 npm install
 npm run dev
 ```
