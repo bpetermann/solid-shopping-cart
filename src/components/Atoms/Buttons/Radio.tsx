@@ -20,6 +20,7 @@ const Radio: ParentComponent<{
         class={styles.input}
         name={props.name}
         value={props.value}
+        id={props.value}
         onChange={change}
       />
       <label for={props.value}>

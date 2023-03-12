@@ -28,7 +28,7 @@ const Newsletter: Component = () => {
     <>
       <Container classname='newsletter'>
         <div class={styles.heading}>
-          <h3>{t('JOIN OUR NEWSLETTER!')}</h3>
+          <h2>{t('JOIN OUR NEWSLETTER!')}</h2>
           <p>{t('Keep up to date')}</p>
         </div>
         <NewsletterForm
