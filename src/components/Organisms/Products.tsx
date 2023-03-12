@@ -1,13 +1,18 @@
 import { Component, createResource, createSignal, For, Show } from 'solid-js';
 import type { ProductType } from '@/types/product.type';
+import { useFavorites } from '@/store/favorite-context';
 import { Container, Spinner } from '@/components/Atoms';
 import styles from './Styles/Products.module.css';
 import { Product } from '@/components/Molecules';
+import { useCart } from '@/store/cart-context';
 
 const Products: Component<{
   category: { id: number; name: string };
   value: string;
 }> = (props) => {
+  const [, { storedFavorites }] = useFavorites()!;
+  const [, { storedCart }] = useCart()!;
+
   const fetchUser = async () => {
     const res = await fetch(
       `https://my-json-server.typicode.com/bpetermann/shopping-cart-jsonserver/storeItems`
@@ -17,6 +22,8 @@ const Products: Component<{
       return { ...i, category: i.category.concat(', Women') };
     });
     setProducts(items);
+    storedFavorites(items);
+    storedCart(items);
   };
 
   const [products, setProducts] = createSignal<ProductType[]>();

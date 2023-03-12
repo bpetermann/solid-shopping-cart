@@ -7,7 +7,7 @@ import { useCart } from '@/store/cart-context';
 const CartModalProduct: Component<{
   item: ProductType;
 }> = (props) => {
-  const [_, { addProduct, removeProduct }] = useCart()!;
+  const [, { addProduct, removeProduct }] = useCart()!;
 
   return (
     <li class={styles['cart-item']}>

@@ -14,8 +14,8 @@ const InfoBar: Component<{
   active: { id: number; name: string };
   showCart: boolean;
 }> = (props) => {
-  const [_, { cartLength }] = useCart()!;
-  const [__, { favoritesLength }] = useFavorites()!;
+  const [, { cartLength }] = useCart()!;
+  const [, { favoritesLength }] = useFavorites()!;
   const [t] = useI18n();
 
   const mainCategories = categories.filter((item) => item.id < 3);

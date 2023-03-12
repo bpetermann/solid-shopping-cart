@@ -8,7 +8,7 @@ import { useFavorites } from '@/store/favorite-context';
 const Product: Component<{
   product: ProductType;
 }> = (props) => {
-  const [_, { addProduct }] = useCart()!;
+  const [, { addProduct }] = useCart()!;
   const [favorites, { toggleFavorite }] = useFavorites()!;
   const [isFavorite, setIsFavorite] = createSignal<boolean>();
 
