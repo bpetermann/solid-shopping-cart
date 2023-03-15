@@ -20,7 +20,7 @@ const Product: Component<{
     <div class={styles.container}>
       <div class={styles.image}>
         <img
-          src={`/images/${props.product.name}.png`}
+          src={`/images/products/${props.product.name}.webp`}
           alt={props.product.description}
           title={props.product.description}
         />

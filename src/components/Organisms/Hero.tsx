@@ -17,7 +17,7 @@ const Hero: Component = () => {
         </button>
       </div>
       <div class={styles.image}>
-        <img src='/images/model.png' alt='Model' />
+        <img src='/images/model.webp' alt='Model' />
       </div>
     </Container>
   );
