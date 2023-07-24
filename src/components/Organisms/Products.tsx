@@ -13,7 +13,7 @@ const Products: Component<{
   const [, { storedFavorites }] = useFavorites()!;
   const [, { storedCart }] = useCart()!;
 
-  const fetchUser = async () => {
+  const fetchProducts = async () => {
     const res = await fetch(
       `https://my-json-server.typicode.com/bpetermann/shopping-cart-jsonserver/storeItems`
     );
@@ -27,7 +27,7 @@ const Products: Component<{
   };
 
   const [products, setProducts] = createSignal<ProductType[]>();
-  const [data] = createResource(fetchUser);
+  const [data] = createResource(fetchProducts);
 
   const searchProducts = () =>
     products()?.filter((item) => {
