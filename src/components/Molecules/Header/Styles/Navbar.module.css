@@ -19,8 +19,8 @@
 
 .cartImage,
 .favoritesImage {
-  height: 100%;
-  width: auto;
+  height: 22px;
+  width: 22px;
 }
 
 .cartAmount,

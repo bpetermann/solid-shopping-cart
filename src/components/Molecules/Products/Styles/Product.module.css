@@ -29,8 +29,8 @@
 }
 
 .favorite > img {
-  height: 100%;
-  width: auto;
+  height: 22px;
+  width: 22px;
 }
 
 .isFavorite {

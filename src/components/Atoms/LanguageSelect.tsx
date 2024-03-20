@@ -23,6 +23,7 @@ const Input: Component<{}> = () => {
       value={lang()}
       onChange={changeLanguage}
       class={styles['lang-select']}
+      aria-label='Language select'
     >
       <For each={languages}>
         {(language) => (
